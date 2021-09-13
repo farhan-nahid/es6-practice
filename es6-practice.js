@@ -4,38 +4,42 @@ const myName = "Farhan";
 let age = 20;
 age = 21;
 
-/* 
+// Problem:2. template string
 
-Problem:2. template string
-Problem:2.a: use variable
-Problem:2.b: use object  property 
+const pera = `This is ${5 + 8}`;
 
-*/
+// Problem:2.a: use variable
 
 const myVar = 36;
-const myObj = { id: 1, name: "watch", price: "300$" };
-
 const myTemplateVar = `This man is ${myVar} years old`;
-const myTemplateObj = `This is a ${myObj.name}. 
-It's id number is ${myObj.id}.
-It is only ${myObj.price}.
-`;
 
-/* 
+// Problem:2.b: use object  property
 
-Problem:3. arrow function
-Problem:3.a. with one parameter. will return the number after dividing by 5
-Problem:3.b. with two parameters. will add two to each number and then multiply the result.
-Problem:3.c. three parameters. will multiply all three parameters
-Problem:3.d. with two parameters but it will be a multi line arrow function. will add two to each number and then multiply the result.
-make sure you return the result 
+const myObj = { id: 1, name: "watch", price: "300$" };
+const myTemplateObj = `
+      This is a ${myObj.name}. 
+      It's id number is ${myObj.id}.
+      It is only ${myObj.price}.
+  `;
 
-*/
+// Problem:3. arrow function
 
-const myArrow = () => console.log("Problem: 1");
+const myArrow = () => console.log("Problem: 3");
+
+// Problem:3.a. with one parameter. will return the number after dividing by 5
+
 const myArrow1 = (num) => num / 5;
+
+// Problem:3.b. with two parameters. will add two to each number and then multiply the result.
+
 const myArrow2 = (num1, num2) => (num1 + 2) * (num2 + 2);
+
+// Problem:3.c. three parameters. will multiply all three parameters
+
 const myArrow3 = (num1, num2, num3) => num1 * num2 * num3;
+
+// Problem:3.d. with two parameters but it will be a multi line arrow function. will add two to each number and then multiply the result. make sure you return the result
+
 const myArrow4 = (num1, num2) => {
   return num1 + num2;
 };
@@ -43,16 +47,13 @@ const myArrow4 = (num1, num2) => {
 // Problem:5. array of numbers. and then map to get each elements multiplied by 5. must use arrow function
 
 const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-myNumbers.map((number) => console.log(number * 5));
+const fiveMultiply = myNumbers.map((number) => number * 5);
 
 // Problem:6. [challenging] numbers of array. get odd numbers by using filter with arrow function
 
 const myOdd = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-myOdd.filter((num) => {
-  const odd = num % 2 != 0;
-  console.log(odd);
-});
+const oddNumber = myOdd.filter((num) => num % 2);
 
 // Problem:7. [challenging] array of objects (e.g. products). use find to get the object with price 5000.
 
@@ -66,11 +67,7 @@ const productObj = [
   { id: 7, name: "product - 7", price: 2000 },
 ];
 
-productObj.find((obj) => {
-  if (obj.price == 5000) {
-    console.log(obj);
-  }
-});
+const price5000 = productObj.find((product) => product.price === 5000);
 
 // Problem:8. You have an object. Now use destructing to create a simple variable of any property of the object.
 
@@ -83,7 +80,6 @@ const { name } = myVarObj;
 const myVarArray = [1, 2, 3, 4, 5];
 
 const three = myVarArray[2];
-console.log(three);
 
 /*
 
