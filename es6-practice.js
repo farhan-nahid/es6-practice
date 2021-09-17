@@ -89,3 +89,28 @@ this function will take three parameters and will return the sum of all the thre
 */
 
 const threeSum = (num1, num2, num3 = 7) => num1 + num2 + num3;
+
+/* 
+
+  একটা nested অবজেক্ট ডিক্লেয়ার করো (অর্থাৎ একটা অবজেক্ট এর প্রপার্টি এর মধ্যেও যে অবজেক্ট থাকতে পারে। আবার সেই অবজেক্ট এর প্রপার্টি এর মধ্যেও সে অবজেক্ট থাকতে পারে। সেই রকম একটা অবজেক্ট ডিক্লেয়ার করো। এবং যেকোন একটা প্রপার্টি এর মান একটা array হবে। জাস্ট এমন একটা অবজেক্ট )
+
+  উপরের অবজেক্ট এ ডট এর আগে যে প্রশ্নবোধক চিহ্ন দিয়ে যে অপশনাল চেইনিং করা যায়। সেটা একটু প্রাকটিস করো। 
+
+ */
+
+const nestedObject = {
+  name: "alu",
+  price: "12",
+  dokan: ["mohakhali", "mirpur", "abul bhai er dokan"],
+  invent: {
+    year: 1000,
+    inventor: "abul kasem",
+    employe: [
+      { name: "potol", year: 200 },
+      { name: "doi", year: 100 },
+      { name: "kumra", year: 600 },
+    ],
+  },
+};
+
+console.log(nestedObject?.invent?.employe[1]?.year);
